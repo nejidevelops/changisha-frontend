@@ -1,61 +1,54 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import website from '../assets/website.svg';
 
-type FieldType = {
-  username?: string;
-  password?: string;
-  remember?: string;
-};
-
 const SignIn: React.FC = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-    <div style={{ display: 'flex' }}>
-      <div style={{ marginRight: '20px' }}>
-        <img src={website} alt="Your Image" style={{ width: '100px', height: '100px' }} />
-      </div>
-
-      <div>
-        <Form
-          name="basic"
-          labelCol={{ span: 8 }}
-          wrapperCol={{ span: 16 }}
-          style={{ maxWidth: 600 }}
-          initialValues={{ remember: true }}
-          autoComplete="off"
-        >
-          <Form.Item<FieldType>
-            label="Username"
-            name="username"
-            rules={[{ required: true, message: 'Please input your username!' }]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item<FieldType>
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
-          >
-            <Input.Password />
-          </Form.Item>
-
-          <Form.Item<FieldType>
-            name="remember"
-            valuePropName="checked"
-            wrapperCol={{ offset: 8, span: 16 }}
-          >
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
+  <div style={{ display: 'flex', height: '100vh' }}>
+    <div style={{ backgroundColor: '#28282B', width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <img src={website} alt="Login Illustration Image" style={{ width: '500px', height: '500px' }} />
     </div>
+    <div style={{ width: '50%', display: 'flex', alignItems: 'center', backgroundColor: '#faf5e9' }}>
+      <Form
+        name="basic"
+        labelCol={{ span: 8 }}
+        wrapperCol={{ span: 16 }}
+        initialValues={{ remember: true }}
+        autoComplete="off"
+        style={{ paddingLeft: '5rem' }}
+      >
+        <Form.Item
+          name="username"
+          rules={[{ required: true, message: 'Please input your username!' }]}
+        >
+          <label style={{ display: 'block', marginBottom: '8px' }}><span style={{ color: 'red' }}>*</span> Username:</label>
+          <Input style={{width: '250%'}} />
+        </Form.Item>
+
+        <Form.Item
+          name="password"
+          rules={[{ required: true, message: 'Please input your password!' }]}
+        >
+          <div style={{ width: '250%', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
+            <label><span style={{ color: 'red' }}>*</span> Password:</label>
+            <a href="#" style={{ color: '#959ca2' }}>Forgot password?</a>
+          </div>
+          <Input.Password style={{width: '250%'}} />
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="default" shape="round" style={{ backgroundColor: '#2272ff', color: 'white', marginTop: '1rem' }}>
+            Sign In
+          </Button>
+        </Form.Item>
+
+        <div style={{ paddingTop: '5rem' }}>
+          <span  style={{ color: '#959ca2' }}>Not yet signed up? <a href="" style={{ fontWeight: 'bold', color: '#3c3e3f' }}>Sign-up Now</a></span>
+        </div>
+      </Form>
+    </div>
+    {/*
+      </div>
+    </div> */}
   </div>
 );
 
