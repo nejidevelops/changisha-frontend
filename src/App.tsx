@@ -1,10 +1,12 @@
 import './App.css'
-import SignIn from './components/SignIn'
+import ForgotPassword from './components/ForgotPassword'
+// import SignIn from './components/SignIn'
 
 function App() {
   return (
     <>
-      <SignIn />
+      {/* <SignIn /> */}
+      <ForgotPassword />
     </>
   )
 }
