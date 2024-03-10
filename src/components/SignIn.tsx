@@ -46,9 +46,6 @@ const SignIn: React.FC = () => (
         </div>
       </Form>
     </div>
-    {/*
-      </div>
-    </div> */}
   </div>
 );
 
