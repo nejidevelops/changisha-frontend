@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
-import website from '../assets/website.svg';
+import website from '../assets/sign-in 1.svg';
 
 const SignIn: React.FC = () => (
   <div style={{ display: 'flex', height: '100vh' }}>
