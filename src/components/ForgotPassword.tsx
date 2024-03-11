@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
-import forgot from '../assets/forgot_password.svg';
+import forgot from '../assets/Forgot password-rafiki 1.svg';
 
 const ForgotPassword: React.FC = () => (
   <div style={{ display: 'flex', height: '100vh' }}>
