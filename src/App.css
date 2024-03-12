@@ -3,3 +3,98 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+}
+
+.auth-container_div {
+  background-color: #28282B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.auth-container_div img {
+  width: 100%;
+  height: auto;
+}
+
+.auth-form-container {
+  display: flex;
+  align-items: center;
+  background-color: #faf5e9;
+  width: 50%;
+  padding-left: 5rem;
+}
+
+.auth-form-container h2 {
+  font-size: 24px;
+}
+
+.auth-form-container label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.auth-form-container .auth-label {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-form-container .auth-label a {
+  color: #959ca2;
+}
+
+.auth-form-container label span {
+  color: red;
+}
+
+.auth-form-container button {
+  background-color: #2272ff;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.auth-form-container input {
+  width: 30vw;
+}
+
+.auth-form-container input[type='password'] {
+  width: 42vw;
+}
+
+.auth-signup {
+  padding-top: 5rem;
+}
+
+.auth-signup span {
+  color: #959ca2;
+}
+
+.auth-signup span a {
+  font-weight: bold;
+  color: #3c3e3f;
+}
+
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-container_div,
+  .auth-form-container {
+    width: 100%;
+  }
+
+  .auth-container_div img {
+    height: 100%;
+  }
+
+  .auth-form-container input {
+    width: 60vw;
+  }
+}
