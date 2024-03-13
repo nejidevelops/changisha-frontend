@@ -7,6 +7,7 @@
 .auth-container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .auth-container_div {
@@ -49,7 +50,7 @@
   color: #959ca2;
 }
 
-.auth-form-container label span {
+label span {
   color: red;
 }
 
@@ -80,6 +81,35 @@
   color: #3c3e3f;
 }
 
+.auth-signup-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #faf5e9;
+  padding-top: 132px;
+  padding-left: 123px;
+}
+
+.auth-signup-container h2 {
+  font-size: 28px;
+}
+
+.auth-signup-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding-top: 115px;
+}
+
+.auth-signup-form input {
+  margin-top: 11px;
+}
+
+.auth-signup-form button {
+  background-color: #2272ff;
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .auth-container {
     flex-direction: column;
@@ -96,5 +126,27 @@
 
   .auth-form-container input {
     width: 60vw;
+  }
+
+  .auth-signup-container {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .auth-signup-container h2 {
+    font-size: 24px;
+  }
+
+  .auth-signup-container form {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-signup-form input {
+    width: 100%;
+  }
+
+  .auth-signup-form button {
+    width: 100%;
   }
 }
