@@ -3,8 +3,8 @@ import { Button, Form, Input } from 'antd';
 
 function SignUp() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: '#faf5e9', paddingTop: '132px', paddingLeft: '123px' }}>
-      <h2 style={{ fontSize: '28px' }}>Elevate Impact: Fundraise, Donate, Transform Lives!</h2>
+    <div className='auth-signup-container'>
+      <h2>Elevate Impact: Fundraise, Donate, Transform Lives!</h2>
       <div>
       <Form
         name="basic"
@@ -12,74 +12,74 @@ function SignUp() {
         wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
         autoComplete="off"
-        style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', paddingTop: '115px' }}
+        className='auth-signup-form'
       >
         <Form.Item
           name="first-name"
           rules={[{ required: true, message: 'Please input your first name!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> First Name:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> First Name:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="last-name"
           rules={[{ required: true, message: 'Please input your last name!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Last Name:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Last Name:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="email"
           rules={[{ required: true, message: 'Please input your email!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Email:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Email:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="phone-number"
           rules={[{ required: true, message: 'Please input your phone number!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Phone Number:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Phone Number:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="username"
           rules={[{ required: true, message: 'Please input your username!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Username:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Username:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="address"
           rules={[{ required: true, message: 'Please input your address!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Address:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Address:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Password:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Password:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item
           name="confirm-password"
           rules={[{ required: true, message: 'Please input your confirm password!' }]}
         >
-          <label><span style={{ color: 'red' }}>*</span> Confirm Password:</label>
-          <Input style={{ marginTop: '11px' }} />
+          <label><span>*</span> Confirm Password:</label>
+          <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="default" shape="round" style={{ backgroundColor: '#2272ff', color: 'white' }}>
+          <Button type="default" shape="round" >
             sign up
           </Button>
         </Form.Item>
